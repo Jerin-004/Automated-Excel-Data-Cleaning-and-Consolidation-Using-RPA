@@ -1,0 +1,84 @@
+{
+  "input_directory": "data/input",
+  "output_directory": "data/output",
+  "archive_directory": "data/archive",
+  "logs_directory": "logs",
+  "reports_directory": "reports",
+
+  "output_filename_prefix": "Master_Consolidated",
+
+  "column_aliases": {
+    "record_id":      ["id", "emp_id", "employee_id", "cust_id", "customer_id", "ref_id", "record_id"],
+    "name":           ["full_name", "employee_name", "customer_name", "contact_name"],
+    "email":          ["email_address", "e_mail", "email_id"],
+    "phone":          ["phone_number", "mobile", "mobile_number", "contact_number", "telephone"],
+    "department":     ["dept", "division", "team"],
+    "joining_date":   ["join_date", "date_of_joining", "start_date", "hire_date"],
+    "salary":         ["annual_salary", "pay", "ctc", "compensation"],
+    "city":           ["location", "city_name", "place", "town"]
+  },
+
+  "required_columns": ["record_id", "name", "email", "salary"],
+
+  "unique_key_columns": ["record_id"],
+
+  "duplicate_check_columns": ["record_id", "name", "email"],
+
+  "categorical_mappings": {
+    "department": {
+      "hr":           "Human Resources",
+      "h.r":          "Human Resources",
+      "h.r.":         "Human Resources",
+      "human resource": "Human Resources",
+      "human resources": "Human Resources",
+      "it":           "Information Technology",
+      "i.t":          "Information Technology",
+      "i.t.":         "Information Technology",
+      "info tech":    "Information Technology",
+      "information technology": "Information Technology",
+      "fin":          "Finance",
+      "finance":      "Finance",
+      "accounts":     "Finance",
+      "mktg":         "Marketing",
+      "marketing":    "Marketing",
+      "mkt":          "Marketing",
+      "ops":          "Operations",
+      "operations":   "Operations",
+      "operation":    "Operations",
+      "sales":        "Sales",
+      "sale":         "Sales",
+      "admin":        "Administration",
+      "administration": "Administration",
+      "r&d":          "Research & Development",
+      "research":     "Research & Development",
+      "research and development": "Research & Development"
+    }
+  },
+
+  "validation_rules": {
+    "salary_min":  0,
+    "salary_max":  10000000,
+    "email_regex": "^[\\w\\.-]+@[\\w\\.-]+\\.\\w{2,}$",
+    "date_formats": [
+      "%Y-%m-%d", "%d/%m/%Y", "%m/%d/%Y", "%d-%m-%Y",
+      "%d %b %Y", "%d %B %Y", "%Y/%m/%d", "%b %d, %Y"
+    ],
+    "output_date_format": "%Y-%m-%d"
+  },
+
+  "missing_value_policy": {
+    "record_id":    "flag",
+    "name":         "flag",
+    "email":        "flag",
+    "phone":        "leave_blank",
+    "department":   "flag",
+    "joining_date": "leave_blank",
+    "salary":       "flag",
+    "city":         "leave_blank"
+  },
+
+  "performance": {
+    "manual_records_per_minute": 100,
+    "comment": "Assumed manual processing rate for demonstration purposes only. Not experimentally verified."
+  }
+}

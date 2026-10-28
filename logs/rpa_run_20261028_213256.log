@@ -1,0 +1,37 @@
+2026-10-28 21:32:56  INFO      src.report_generator  File logging configured: /home/jerin/Documents/Development/Automated-Excel-Data-Cleaning-and-Consolidation-Using-RPA/logs/rpa_run_20261028_213256.log
+2026-10-28 21:32:56  INFO      src.rpa_workflow  === RPA Workflow started  20261028_213256 ===
+2026-10-28 21:32:56  INFO      src.file_discovery  Discovered: employees_legacy_export.xlsx  (6704 bytes)
+2026-10-28 21:32:56  INFO      src.file_discovery  Discovered: employees_south_region.xlsx  (7410 bytes)
+2026-10-28 21:32:56  INFO      src.file_discovery  Discovered: employees_north_region.xlsx  (7358 bytes)
+2026-10-28 21:32:56  INFO      src.file_discovery  Discovery complete — 3 file(s) found, 3 processable.
+2026-10-28 21:32:56  INFO      src.rpa_workflow  Discovered 3 processable file(s).
+2026-10-28 21:32:56  INFO      src.excel_reader  Read 'employees_legacy_export.xlsx': 1 sheet(s), 23 total rows.
+2026-10-28 21:32:56  INFO      src.excel_reader  Read 'employees_south_region.xlsx': 1 sheet(s), 32 total rows.
+2026-10-28 21:32:56  INFO      src.excel_reader  Read 'employees_north_region.xlsx': 1 sheet(s), 31 total rows.
+2026-10-28 21:32:56  INFO      src.data_validator  Validation: 16 valid, 0 review, 7 invalid  (7 errors).
+2026-10-28 21:32:56  INFO      src.data_validator  Validation: 29 valid, 0 review, 3 invalid  (3 errors).
+2026-10-28 21:32:56  INFO      src.data_validator  Validation: 24 valid, 2 review, 5 invalid  (7 errors).
+2026-10-28 21:32:56  INFO      src.data_cleaner  Duplicate detection: 0 exact, 26 conflicting, 45 clean records.
+2026-10-28 21:32:56  INFO      src.rpa_workflow  Global duplicate detection: 26 duplicate records found.
+2026-10-28 21:32:56  INFO      src.data_consolidator    Consolidating 'employees_legacy_export.xlsx': 13 rows
+2026-10-28 21:32:56  INFO      src.data_consolidator    Consolidating 'employees_north_region.xlsx': 16 rows
+2026-10-28 21:32:56  INFO      src.data_consolidator    Consolidating 'employees_south_region.xlsx': 16 rows
+2026-10-28 21:32:56  INFO      src.data_consolidator  Consolidation complete: 45 records from 3 source(s), 15 columns.
+2026-10-28 21:32:56  INFO      src.excel_exporter  Master workbook written: /home/jerin/Documents/Development/Automated-Excel-Data-Cleaning-and-Consolidation-Using-RPA/data/output/Master_Consolidated_20261028_213256.xlsx
+2026-10-28 21:32:56  INFO      src.report_generator  Validation CSV saved: /home/jerin/Documents/Development/Automated-Excel-Data-Cleaning-and-Consolidation-Using-RPA/reports/validation_errors_20261028_213256.csv
+2026-10-28 21:32:56  INFO      src.report_generator  Run summary JSON saved: /home/jerin/Documents/Development/Automated-Excel-Data-Cleaning-and-Consolidation-Using-RPA/reports/run_summary_20261028_213256.json
+2026-10-28 21:32:56  INFO      src.rpa_workflow  === RUN SUMMARY ===
+2026-10-28 21:32:56  INFO      src.rpa_workflow    Total Input Records                                86
+2026-10-28 21:32:56  INFO      src.rpa_workflow    Total Cleaned Records                              86
+2026-10-28 21:32:56  INFO      src.rpa_workflow    Total Duplicate Records Detected                   26
+2026-10-28 21:32:56  INFO      src.rpa_workflow    Records Requiring Review                           2
+2026-10-28 21:32:56  INFO      src.rpa_workflow    Invalid Records                                    15
+2026-10-28 21:32:56  INFO      src.rpa_workflow    Files Successfully Processed                       3
+2026-10-28 21:32:56  INFO      src.rpa_workflow    Files Failed                                       0
+2026-10-28 21:32:56  INFO      src.rpa_workflow    Actual Automation Duration                         0.00 s
+2026-10-28 21:32:56  INFO      src.rpa_workflow    Records Processed per Second                       N/A (< 1 ms)
+2026-10-28 21:32:56  INFO      src.rpa_workflow    Estimated Manual Duration (@ 100 rec/min — ESTIMATE) 51.60 s
+2026-10-28 21:32:56  INFO      src.rpa_workflow    Estimated Time Saved (ESTIMATE)                    51.60 s
+2026-10-28 21:32:56  INFO      src.rpa_workflow    Estimated Time Reduction % (ESTIMATE)              100.0%
+2026-10-28 21:32:56  INFO      src.rpa_workflow    Manual Rate Assumption                             100.0 records/minute (configurable estimate)
+2026-10-28 21:32:56  INFO      src.rpa_workflow  Workflow finished: WorkflowStatus.SUCCESS  (0.19s)

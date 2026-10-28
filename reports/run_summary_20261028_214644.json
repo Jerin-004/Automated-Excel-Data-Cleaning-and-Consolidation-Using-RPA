@@ -1,0 +1,15 @@
+{
+  "Total Input Records": 86,
+  "Total Cleaned Records": 86,
+  "Total Duplicate Records Detected": 26,
+  "Records Requiring Review": 2,
+  "Invalid Records": 15,
+  "Files Successfully Processed": 3,
+  "Files Failed": 0,
+  "Actual Automation Duration": "0.00 s",
+  "Records Processed per Second": "N/A (< 1 ms)",
+  "Estimated Manual Duration (@ 100 rec/min \u2014 ESTIMATE)": "51.60 s",
+  "Estimated Time Saved (ESTIMATE)": "51.60 s",
+  "Estimated Time Reduction % (ESTIMATE)": "100.0%",
+  "Manual Rate Assumption": "100.0 records/minute (configurable estimate)"
+}
